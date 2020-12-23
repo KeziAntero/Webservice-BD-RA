@@ -50,7 +50,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         BDController::addReporte($reporte);
         $msg = array('status' => 'SUCCESS','mensagem' => 'O reporte da aglomeração foi registrado com sucesso!');
         echo json_encode($msg);
-        header('Location: http://localhost:3000');
+        header('Location: http://agglomeration.brazilsouth.cloudapp.azure.com/painel.php');
         exit();
     }else{
         $msg = array('status' => 'ERRO','mensagem' => 'Não foi registrado o reporte da aglomeração!');
